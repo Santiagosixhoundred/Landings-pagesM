@@ -1,0 +1,146 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #111;
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden;
+    /* para que no aparezca scroll */
+}
+
+/* Hero layout */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    height: 100vh;
+    /* ocupa toda la pantalla */
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    /* centra verticalmente */
+}
+
+/* Left side */
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 75vh;
+    /* la imagen ocupa mitad de la pantalla */
+    object-fit: cover;
+
+    margin-top: -55px;
+    /* 🔼 sube la imagen */
+}
+
+.description {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+/* Right side */
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.hero-right h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    position: relative;
+    margin-left: -162px;
+    /* Mueve hacia la izquierda */
+    position: relative;
+    /* clave: solo movemos este elemento */
+    top: -80px;
+    /*  sube */
+}
+
+.hero-right h1 span {
+    font-weight: 400;
+    /*  Más delgado */
+    font-style: italic;
+    /*  Similar al ejemplo */
+    color: transparent;
+    /*  Hace que se vea outline */
+    -webkit-text-stroke: 1px #111;
+    /*  Borde negro estilo outline */
+}
+
+/* Stats box */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #080808;
+    border-radius: 12px;
+    padding: 2rem;
+    gap: 1rem;
+    text-align: left;
+}
+
+.stat h3 {
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.stat p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 50%;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    min-height: 300px;
+}
+
+.star {
+    position: absolute;
+    top: 22%;
+    /* Mitad vertical */
+    left: 78%;
+    /* Mitad horizontal */
+    transform: translate(-130%, -40%) scale(0.5);
+    /* Centrar exactamente */
+    transform-origin: center;
+}

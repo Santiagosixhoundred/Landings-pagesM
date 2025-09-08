@@ -1,0 +1,165 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #d9e9f5, #f6e4b1);
+    color: #333;
+    justify-content: center;
+    /* centra en horizontal */
+    align-items: center;
+    /* centra en vertical */
+    min-height: 100vh;
+    /* altura total de la pantalla */
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 1rem;
+    color: #444;
+}
+
+.btn {
+    background: #222;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #444;
+}
+
+/* Variables base */
+:root {
+    --gap: 15px;
+    --cell1: 140px;
+    /* fila superior */
+    --cell2: 420px;
+    /* fila intermedia */
+    --cell3: 180px;
+    /* fila inferior */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    /* izq(2) - centro(2) - der(1) */
+    grid-template-rows: 200px 200px;
+    /* 2 filas */
+    grid-template-areas:
+        "card1 card2 card3 card3 card5"
+        "card4 card4 card3 card3 card6";
+    gap: 15px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: -40px 0 auto;
+    border-radius: 14px;
+    transform: translateX(190px);
+}
+
+/* Posiciones */
+.card1 {
+    grid-area: card1;
+}
+
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card5 {
+    grid-area: card5;
+}
+
+.card6 {
+    grid-area: card6;
+}
+
+
+.card4 .overlay.title {
+    top: 10px;
+    /* arriba */
+    right: auto;
+    /* derecha */
+    left: 10px;
+    /* quitamos el left */
+    bottom: auto;
+    /* quitamos el bottom */
+}
+
+.card3 .overlay.title {
+    top: 10px;
+    /* arriba */
+    right: 10px;
+    /* derecha */
+    left: auto;
+    /* quitamos el left */
+    bottom: auto;
+    /* quitamos el bottom */
+}
+
+
+
+
+/* Estilos comunes */
+.card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    color: #000;
+    border-radius: 6px;
+    max-width: 90%;
+}
+
+.overlay.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: none;
+    color: #000;
+}

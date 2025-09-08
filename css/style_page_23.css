@@ -1,0 +1,139 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #111;
+}
+
+/* Fondo amarillo */
+.bg-img {
+    position: fixed;
+    /* se queda pegada al fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ajusta la imagen sin deformarse */
+    z-index: -1;
+    /* la manda detrás del contenido */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem 6rem;
+}
+
+.content h2 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.highlight {
+    border: 2px solid #111;
+    padding: 0.3rem 1.2rem;
+    border-radius: 50px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.studio {
+    display: block;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.btn {
+    margin-top: 2rem;
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 1rem 2.2rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* Steps */
+.info {
+    max-width: 480px;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.step {
+    display: flex;
+    gap: 1rem;
+}
+
+.step h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.step h4 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.step p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #444;
+}
+
+/* Estadísticas */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 0rem 3rem 3rem auto;
+    padding: 0.8rem 2rem;
+    border: 2px solid #111;
+    border-radius: 50px;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 1rem;
+    transform: translateY(-140px);
+}
+
+/* Redes sociales */
+.redes {
+    position: absolute;
+    bottom: 40px;
+    left: 990px;
+}
+
+.social {
+    width: 140px;
+}
+
+/* Logo círculo */
+.circulo {
+    position: absolute;
+    bottom: 140px;
+    right: 420px;
+}
+
+.circle {
+    width: 80px;
+}
+
+/* Dibujo */
+.dibujo {
+    position: absolute;
+    top: 100px;
+    right: 670px;
+}
+
+.decor {
+    width: 200px;
+}

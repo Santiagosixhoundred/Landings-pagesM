@@ -1,0 +1,124 @@
+/* General */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #222;
+}
+
+.bg-img {
+    position: fixed;
+    /* se queda pegada al fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ajusta la imagen sin deformarse */
+    z-index: -1;
+    /* la manda detrás del contenido */
+}
+
+
+/* Layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 5rem;
+    min-height: 100vh;
+}
+
+/* Caja izquierda */
+.info-card {
+    width: 320px;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #000000;
+    position: relative;
+    margin-top: 70px;
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.desc {
+    margin-top: 3rem;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* Estadísticas */
+.stats {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+
+.stat h3 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.stat p {
+    margin: 0;
+    font-size: 18px;
+    color: #444;
+}
+
+/* Caja derecha */
+.content {
+    position: relative;
+    width: 50%;
+    max-width: none;
+    margin-left: 200px;
+    /* fuerza que esté pegado a la izquierda */
+    margin-right: auto;
+    top: -170px;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.content p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 0.9rem 2rem;
+    font-size: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.star {
+    position: absolute;
+    top: 36%;
+    /* Mitad vertical */
+    left: 71%;
+    /* Mitad horizontal */
+    transform: translate(-450%, -70%) scale(0.5);
+    /* Centrar exactamente */
+    transform-origin: translateX(-80px);
+    z-index: 10;
+}

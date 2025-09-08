@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header-section h1 {
+    font-size: 3em;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.header-section p {
+    font-size: 1.1em;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+.explore-button {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+    background-color: #555;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 100%;
+    padding-bottom: 100%; /* Mantiene el cuadro cuadrado */
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Estilos para las imágenes de los cuadros (placeholders) */
+.gallery-item:nth-child(1) { background-image: url('https://via.placeholder.com/200x200/ff6b6b/ffffff?text=Image1'); background-size: cover; }
+.gallery-item:nth-child(2) { background-image: url('https://via.placeholder.com/200x200/a2d9ff/ffffff?text=Image2'); background-size: cover; }
+.gallery-item:nth-child(3) { background-image: url('https://via.placeholder.com/200x200/ffa500/ffffff?text=Image3'); background-size: cover; }
+.gallery-item:nth-child(4) { background-image: url('https://via.placeholder.com/200x200/6a0dad/ffffff?text=Image4'); background-size: cover; }
+.gallery-item:nth-child(5) { background-image: url('https://via.placeholder.com/200x200/ff4d4d/ffffff?text=Image5'); background-size: cover; }
+.gallery-item:nth-child(6) { background-image: url('https://via.placeholder.com/200x200/ff8c00/ffffff?text=Image6'); background-size: cover; }
+.gallery-item:nth-child(7) { background-image: url('https://via.placeholder.com/200x200/d3d3d3/ffffff?text=Image7'); background-size: cover; }
+.gallery-item:nth-child(8) { background-image: url('https://via.placeholder.com/200x200/87ceeb/ffffff?text=Image8'); background-size: cover; }
+
+/* Para las imágenes reales, reemplazar las URLs de placeholder con las tuyas */
+/* Por ejemplo:
+.gallery-item:nth-child(1) { background-image: url('tu-imagen-1.jpg'); background-size: cover; }
+*/
+
+
+@media (max-width: 768px) {
+    .header-section h1 {
+        font-size: 2.2em;
+    }
+
+    .header-section p {
+        font-size: 1em;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header-section h1 {
+        font-size: 1.8em;
+    }
+
+    .explore-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+    }
+}

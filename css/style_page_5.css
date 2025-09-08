@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.main-title {
+    font-size: 3.5em; /* Ajusta el tamaño según sea necesario */
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 50px;
+    line-height: 1.1;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+    gap: 30px; /* Espacio entre los elementos de la cuadrícula */
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-number {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.project-description {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px; /* Ligeramente redondeado como en la imagen */
+}
+
+/* Responsive design para pantallas más pequeñas */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5em;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+    .project-number {
+        font-size: 1.2em;
+    }
+    .project-description {
+        font-size: 0.9em;
+    }
+}

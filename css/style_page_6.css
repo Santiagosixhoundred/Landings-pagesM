@@ -1,0 +1,280 @@
+:root {
+    --primary-text-color: #2c3e50;
+    --secondary-text-color: #7f8c8d;
+    --button-primary-bg: #1a1a1a;
+    --button-primary-text: #ffffff;
+    --button-secondary-bg: #ffffff;
+    --button-secondary-border: #dcdcdc;
+    --badge-bg: #6a5acd; 
+    --badge-text: #ffffff;
+    --border-color: #dcdcdc;
+    --background-color: #f9f9f9;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+    padding: 0 0 32px 0;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 32px 40px 0 40px;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.logo-circle {
+    width: 18px;
+    height: 18px;
+    background: #7c3aed;
+    border-radius: 50%;
+}
+
+.star-shape {
+    position: absolute;
+    left: 30px;
+    top: -30px;
+    width: 60px;
+    height: 60px;
+    background: none;
+}
+.star-shape::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 60px; height: 60px;
+    background: none;
+    /* SVG star */
+    background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="30,0 36,22 60,22 40,36 48,60 30,46 12,60 20,36 0,22 24,22" stroke="black" stroke-width="2" fill="white"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 0 40px;
+}
+
+.text-section {
+    flex: 1;
+    padding-top: 40px;
+}
+
+.text-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #222;
+}
+
+.text-section p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 32px;
+}
+
+.buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn.primary {
+    background: #7c3aed;
+    color: #fff;
+}
+
+.btn.secondary {
+    background: #eee;
+    color: #333;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-width: 340px;
+}
+
+.image-card {
+    position: relative;
+    background: #fff;
+    border-radius: 32px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 0;
+    width: 340px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-card::before,
+.image-card::after {
+    content: '';
+    position: absolute;
+    border: 2px solid #222;
+    border-radius: 32px;
+    pointer-events: none;
+}
+
+.image-card::before {
+    left: -32px;
+    top: -32px;
+    width: 320px;
+    height: 400px;
+}
+
+.image-card::after {
+    right: -32px;
+    bottom: -32px;
+    width: 320px;
+    height: 400px;
+}
+
+.watch-image {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    z-index: 2;
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    background: #7c3aed;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 10px;
+    z-index: 3;
+    box-shadow: 0 2px 8px rgba(124,58,237,0.08);
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.badge.top-right {
+    top: 28px;
+    right: 28px;
+}
+
+.badge.bottom-left {
+    bottom: 28px;
+    left: 28px;
+}
+
+.sparkle {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background: none;
+    z-index: 2;
+}
+.sparkle-1 {
+    left: 60px;
+    top: 90px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 0 L28 20 L48 24 L28 28 L24 48 L20 28 L0 24 L20 20 Z" stroke="white" stroke-width="2" fill="none"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.sparkle-2 {
+    right: 60px;
+    bottom: 90px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 0 L28 20 L48 24 L28 28 L24 48 L20 28 L0 24 L20 20 Z" stroke="white" stroke-width="2" fill="none"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 32px 40px 0 40px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 1em;
+    color: #333;
+}
+
+.icon {
+    font-size: 2em;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        max-width: 98vw;
+        border-radius: 0;
+    }
+    .main-content {
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 16px;
+    }
+    .image-section {
+        min-width: 0;
+        width: 100%;
+    }
+    .image-card {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+    .footer {
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px 16px 0 16px;
+    }
+}

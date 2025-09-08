@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Georgia", serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-img {
+    position: fixed;
+    /* se queda pegada al fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ajusta la imagen sin deformarse */
+    z-index: -1;
+    /* la manda detrás del contenido */
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    flex: 1;
+    color: #000;
+    padding-left: 0;
+    /* 👈 quita espacio a la izquierda */
+    padding-right: auto;
+    margin-left: -120px;
+}
+
+.left h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.left p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.btn {
+    background: #000;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.right {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-cup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.center-cup img {
+    width: 300px;
+}
+
+.stats {
+    color: #fff;
+    width: 250px;
+    text-align: left;
+    margin-bottom: 50px;
+    z-index: 2;
+}
+
+.stats h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.stats img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.stats p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #ccc;
+}
+
+.top {
+    align-self: flex-end;
+    margin-top: 50px;
+}
+
+.bottom {
+    align-self: flex-end;
+}

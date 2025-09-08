@@ -1,0 +1,141 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #111;
+}
+
+/* Sección principal */
+.hero {
+    padding: 4rem 8%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.text {
+    max-width: 50%;
+}
+
+.text h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 3rem;
+}
+
+.with-line {
+    border-left: 3px solid #111;
+    padding-left: 1rem;
+}
+
+.text h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0.5rem 0 2rem;
+    margin-left: 3rem;
+}
+
+.text p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #000;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.image img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin-top: 7rem;
+    margin-left: -6rem
+}
+
+
+.circulo {
+    position: absolute;
+
+}
+
+.circulo {
+    left: 83%;
+    /* Ajusta la posición horizontal */
+    width: 200px;
+    /* Tamaño del contenedor */
+}
+
+/* Estilo para las imágenes dentro de los contenedores */
+.circulo img {
+    width: 50%;
+    /* La imagen ocupa todo el contenedor */
+    height: auto;
+    margin-top: -70rem;
+    position: relative;
+    top: -70px;
+    /* 👈 la sube 50px */
+}
+
+
+/* Sección inferior */
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    gap: 0rem;
+    /* controla el espacio entre cuadros */
+    padding: 0 5rem;
+}
+
+.feature {
+    padding: 3rem;
+    flex: 1;
+    border-radius: 0px;
+    color: #111;
+    /* color del texto */
+}
+
+/* 🎨 Colores diferentes */
+.feature:nth-child(1) {
+    background: #ffffff;
+    /* rojo claro */
+}
+
+.feature:nth-child(2) {
+    background: #dbdbdb;
+    /* verde claro */
+}
+
+.feature:nth-child(3) {
+    background: #ffffff;
+    /* azul claro */
+}
+
+.feature:nth-child(4) {
+    background: #dbdbdb;
+    /* amarillo claro */
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
